@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "bundle": "watchify -t [ babelify --presets [ react es2015 ] ] public/js/script.js -o public/js/bundle.js -d",
+    "deploy": "./node_modules/browserify/bin/cmd.js -t [ babelify --presets [ react es2015 ] ] -t uglifyify ./public/js/script.js -o ./public/js/bundle.js -d"
   },
   "repository": {
     "type": "git",
@@ -18,17 +20,25 @@
   },
   "homepage": "https://github.com/jonathanfeudi/gitgud#readme",
   "dependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babelify": "^7.3.0",
     "bcrypt": "^0.8.7",
     "body-parser": "^1.15.1",
+    "browserify": "^13.0.1",
     "dotenv": "^2.0.0",
     "express": "^4.14.0",
     "express-jwt": "^3.4.0",
     "jsonwebtoken": "^7.0.1",
+    "minifyify": "^7.3.3",
     "path": "^0.12.7",
     "pg-promise": "^4.7.1",
     "react": "^15.1.0",
+    "react-addons-linked-state-mixin": "^15.1.0",
     "react-dom": "^15.1.0",
     "react-router": "^2.4.1",
-    "simple-git": "^1.37.0"
+    "simple-git": "^1.37.0",
+    "uglifyify": "^3.0.2",
+    "watchify": "^3.7.0"
   }
 }
