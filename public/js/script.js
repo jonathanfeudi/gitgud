@@ -1,15 +1,13 @@
-const React = require('react');
-const render = require('react-dom').render;
-const browserHistory = require('react-router').browserHistory;
-const Router = require('react-router').Router;
-const Route = require('react-router').Route;
-const Link = require('react-router').Link;
+import React from 'react'
+import { render } from 'react-dom'
+import { Router, Route, Link, browserHistory } from 'react-router'
 
-const SignUp = require('./authComponents/signup')
-const Login = require('./authComponents/login');
-const Logout = require('./authComponents/logout');
 
-const auth = require('./auth');
+import SignUp from './authComponents/signup'
+import Login from './authComponents/login'
+import Logout from './authComponents/logout'
+
+import auth from './auth'
 
 const App = React.createClass({
   getInitialState : function() {
@@ -47,6 +45,7 @@ const App = React.createClass({
               )}
             </li>
           </ul>
+          {this.props.children || <p>You are {!this.state.loggedIn && 'not'} logged in.</p>}
         </div>
       </div>
     )

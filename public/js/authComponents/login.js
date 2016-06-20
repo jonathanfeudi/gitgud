@@ -1,7 +1,7 @@
-const React = require('react')
-const auth = require('../auth');
+import React from 'react'
+import auth from '../auth'
 
-const Login = React.createClass({
+export default React.createClass({
 
   contextTypes: {
     router: React.PropTypes.object.isRequired
@@ -46,5 +46,3 @@ const Login = React.createClass({
     )
   }
 })
-
-module.exports = Login;

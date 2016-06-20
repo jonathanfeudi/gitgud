@@ -1,7 +1,7 @@
-const React = require('react')
-const auth = require('../auth')
+import React from 'react'
+import auth from '../auth'
 
-const Logout = React.createClass({
+export default React.createClass({
   componentDidMount : function() {
     auth.logout()
   },
@@ -10,5 +10,3 @@ const Logout = React.createClass({
     return <p>You are now logged out</p>
   }
 })
-
-module.exports = Logout;
