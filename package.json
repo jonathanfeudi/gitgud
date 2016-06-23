@@ -9,7 +9,7 @@
     "bundle": "watchify -t [ babelify --presets [ react es2015 ] ] public/js/script.js -o public/js/bundle.js -d",
     "deploy": "./node_modules/browserify/bin/cmd.js -t [ babelify --presets [ react es2015 ] ] -t uglifyify ./public/js/script.js -o ./public/js/bundle.js -d",
     "deploy2": "browserify -t [ babelify --presets [ react es2015 ] ] -t uglifyify public/js/script.js -o public/js/bundle.js -d",
-    "deploy3": "node_modules/browserify/bin/cmd.js -t [ babelify --presets [ react es2015 ] ] -t uglifyify ./public/js/script.js -o ./public/js/bundle.js -d"
+    "deploy3": "node_modules/browserify/bin/cmd.js -t [ babelify --presets [ react es2015 ] ] -t uglifyify public/js/script.js -o public/js/bundle.js -d"
   },
   "repository": {
     "type": "git",
