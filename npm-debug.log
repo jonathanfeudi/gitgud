@@ -1,0 +1,49 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/5.9.1/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'deploy2' ]
+2 info using npm@3.7.3
+3 info using node@v5.9.1
+4 verbose run-script [ 'predeploy2', 'deploy2', 'postdeploy2' ]
+5 info lifecycle gitgud@1.0.0~predeploy2: gitgud@1.0.0
+6 silly lifecycle gitgud@1.0.0~predeploy2: no script for predeploy2, continuing
+7 info lifecycle gitgud@1.0.0~deploy2: gitgud@1.0.0
+8 verbose lifecycle gitgud@1.0.0~deploy2: unsafe-perm in lifecycle true
+9 verbose lifecycle gitgud@1.0.0~deploy2: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/Feudimonster/dev/gitgud/node_modules/.bin:/usr/local/Cellar/node/5.9.1/bin:/Users/Feudimonster/.rbenv/bin:/Users/Feudimonster/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+10 verbose lifecycle gitgud@1.0.0~deploy2: CWD: /Users/Feudimonster/dev/gitgud
+11 silly lifecycle gitgud@1.0.0~deploy2: Args: [ '-c',
+11 silly lifecycle   './node_modules/browserify/bin/cmd.js -t [ babelify --presets [ react es2015 ] ] uglifyify ./public/js/script.js -o ./public/js/bundle.js -d' ]
+12 silly lifecycle gitgud@1.0.0~deploy2: Returned: code: 1  signal: null
+13 info lifecycle gitgud@1.0.0~deploy2: Failed to exec deploy2 script
+14 verbose stack Error: gitgud@1.0.0 deploy2: `./node_modules/browserify/bin/cmd.js -t [ babelify --presets [ react es2015 ] ] uglifyify ./public/js/script.js -o ./public/js/bundle.js -d`
+14 verbose stack Exit status 1
+14 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:239:16)
+14 verbose stack     at emitTwo (events.js:100:13)
+14 verbose stack     at EventEmitter.emit (events.js:185:7)
+14 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+14 verbose stack     at emitTwo (events.js:100:13)
+14 verbose stack     at ChildProcess.emit (events.js:185:7)
+14 verbose stack     at maybeClose (internal/child_process.js:850:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:215:5)
+15 verbose pkgid gitgud@1.0.0
+16 verbose cwd /Users/Feudimonster/dev/gitgud
+17 error Darwin 15.5.0
+18 error argv "/usr/local/Cellar/node/5.9.1/bin/node" "/usr/local/bin/npm" "run" "deploy2"
+19 error node v5.9.1
+20 error npm  v3.7.3
+21 error code ELIFECYCLE
+22 error gitgud@1.0.0 deploy2: `./node_modules/browserify/bin/cmd.js -t [ babelify --presets [ react es2015 ] ] uglifyify ./public/js/script.js -o ./public/js/bundle.js -d`
+22 error Exit status 1
+23 error Failed at the gitgud@1.0.0 deploy2 script './node_modules/browserify/bin/cmd.js -t [ babelify --presets [ react es2015 ] ] uglifyify ./public/js/script.js -o ./public/js/bundle.js -d'.
+23 error Make sure you have the latest version of node.js and npm installed.
+23 error If you do, this is most likely a problem with the gitgud package,
+23 error not with npm itself.
+23 error Tell the author that this fails on your system:
+23 error     ./node_modules/browserify/bin/cmd.js -t [ babelify --presets [ react es2015 ] ] uglifyify ./public/js/script.js -o ./public/js/bundle.js -d
+23 error You can get information on how to open an issue for this project with:
+23 error     npm bugs gitgud
+23 error Or if that isn't available, you can get their info via:
+23 error     npm owner ls gitgud
+23 error There is likely additional logging output above.
+24 verbose exit [ 1, true ]
